@@ -1,0 +1,35 @@
+{
+    "name": "bilibili-peace",
+    "manifest_version":2,
+    "version":"1.0.0",
+    "icons": 
+    { 
+           
+      "48": "icon48.png"           
+     
+    },  
+    "page_action": {
+      "default_icon": "images/tv_close.png", // optional 
+      "default_title": "take you back to a peace world",    // optional; shown in tooltip 
+      "default_popup": ""    // optional 
+    },
+    "background": {
+        "scripts": ["scripts/background.js"]
+      },
+    "content_scripts": [
+        {
+          "matches": ["https://www.bilibili.com/video/av*","http://www.bilibili.com/video/av*","https://bangumi.bilibili.com/anime/*","http://bangumi.bilibili.com/anime/*"],
+        //   "css": ["mystyles.css"],
+          "js": [ "scripts/myscript.js"]
+        }
+      ],
+      "permissions": [
+        "tabs", "http://*/*"
+      ],
+      "web_accessible_resources": [
+        "images/tv_close.png",
+        "images/tv_normal.png",
+        "scripts/background.js",
+        "scripts/myscript.js"
+      ]
+  }
