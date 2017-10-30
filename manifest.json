@@ -18,7 +18,14 @@
       },
     "content_scripts": [
         {
-          "matches": ["https://www.bilibili.com/video/av*","http://www.bilibili.com/video/av*","https://bangumi.bilibili.com/anime/*","http://bangumi.bilibili.com/anime/*"],
+          "matches": [
+             "https://www.bilibili.com/video/av*"
+            ,"http://www.bilibili.com/video/av*"
+            ,"https://bangumi.bilibili.com/anime/*"
+            ,"http://bangumi.bilibili.com/anime/*"
+            ,"https://bangumi.bilibili.com/movie/*"
+            ,"http://bangumi.bilibili.com/movie/*"
+          ],
         //   "css": ["mystyles.css"],
           "js": [ "scripts/myscript.js"]
         }
