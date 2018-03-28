@@ -16,9 +16,9 @@ function closeDanmaku() {
     'bubbles': true,
     'cancelable': true
   })
-    , ele = par.querySelector('.bilibili-player-video-btn-danmaku');
+    , ele = par.querySelector('.bilibili-player-video-btn-danmaku[name=ctlbar_danmuku_on]');
   setTimeout(function () {
-    ele.dispatchEvent(event);
+    ele && ele.dispatchEvent(event);
   }, 300);
   // var offed = -1 != ele.getAttribute("class").split(" ").indexOf("video-state-danmaku-off");
   chrome.extension.sendRequest({ greeting: "hello" }, function (response) {
@@ -51,6 +51,8 @@ function onPageChanged() {
 function closeAndDisconnect() {
   closeDanmaku()
   observer.disconnect();
+  chrome.extension.sendRequest({ greeting: "hello" }, function (response) {
+  });
 }
 
 $(document).on("click", ".episode-item,.bilibili-player-video-toast-item-jump", closeAndDisconnect);
