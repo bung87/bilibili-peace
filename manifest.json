@@ -28,17 +28,18 @@
             ,"https://www.bilibili.com/bangumi/play/*"
             ,"http://www.bilibili.com/bangumi/play/*"
           ],
-          "js": [ "scripts/myscript.js"],
+          "js": [ "scripts/jquery-3.3.1.min.js","scripts/myscript.js"],
           "run_at": "document_end"
         }
       ],
       "permissions": [
-        "tabs", "http://*/*"
+        "tabs", "http://*/*","history"
       ],
       "web_accessible_resources": [
         "images/tv_close.png",
         "images/tv_normal.png",
         "scripts/background.js",
+        "scripts/jquery-3.3.1.min.js",
         "scripts/myscript.js"
       ]
   }
