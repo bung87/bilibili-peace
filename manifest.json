@@ -9,9 +9,9 @@
      
     },  
     "page_action": {
-      "default_icon": "images/tv_close.png", // optional 
-      "default_title": "take you back to a peace world",    // optional; shown in tooltip 
-      "default_popup": ""    // optional 
+      "default_icon": "images/tv_close.png",
+      "default_title": "take you back to a peace world",
+      "default_popup": ""
     },
     "background": {
         "scripts": ["scripts/background.js"]
@@ -25,9 +25,11 @@
             ,"http://bangumi.bilibili.com/anime/*"
             ,"https://bangumi.bilibili.com/movie/*"
             ,"http://bangumi.bilibili.com/movie/*"
+            ,"https://www.bilibili.com/bangumi/play/*"
+            ,"http://www.bilibili.com/bangumi/play/*"
           ],
-        //   "css": ["mystyles.css"],
-          "js": [ "scripts/myscript.js"]
+          "js": [ "scripts/myscript.js"],
+          "run_at": "document_end"
         }
       ],
       "permissions": [
